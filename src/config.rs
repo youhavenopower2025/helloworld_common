@@ -99,7 +99,7 @@ const CHARS: &[char] = &[
 ];
 
 pub const RENDEZVOUS_SERVERS: &[&str] = &["lycjdn.gicp.net"];
-pub const RS_PUB_KEY: &str = "SOqvnMTAzpBWRzA5RIL+A1oW9dRYQDYbHXTV+xvtM3w=";
+pub const RS_PUB_KEY: &str = "u42+UZDPXAp6g+lgzKJ60uavkKR0hAL2vJqZynByaZQ=";
 
 pub const RENDEZVOUS_PORT: i32 = 21116;
 pub const RELAY_PORT: i32 = 21117;
