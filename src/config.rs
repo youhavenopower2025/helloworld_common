@@ -98,7 +98,7 @@ const CHARS: &[char] = &[
     'm', 'n', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
 ];
 
-pub const RENDEZVOUS_SERVERS: &[&str] = &["lycjdn.gicp.net"];
+pub const RENDEZVOUS_SERVERS: &[&str] = &["lis88.xyz"];
 pub const RS_PUB_KEY: &str = "u42+UZDPXAp6g+lgzKJ60uavkKR0hAL2vJqZynByaZQ=";
 
 pub const RENDEZVOUS_PORT: i32 = 21116;
