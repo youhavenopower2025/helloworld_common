@@ -224,7 +224,7 @@ pub struct Config2 {
     pub options: HashMap<String, String>,
 }
 
-#[derive(Debug, Default, Serialize, Deserialize, Clone, PartialEq)]
+#[derive(Debug, Default, Serialize, Deserialize, Clone)]
 pub struct Resolution {
     pub w: i32,
     pub h: i32,
@@ -401,7 +401,7 @@ pub struct PeerInfoSerde {
     pub platform: String,
 }
 
-#[derive(Debug, Default, Serialize, Deserialize, Clone, PartialEq)]
+#[derive(Debug, Default, Serialize, Deserialize, Clone)]
 pub struct TransferSerde {
     #[serde(default, deserialize_with = "deserialize_vec_string")]
     pub write_jobs: Vec<String>,
@@ -1021,17 +1021,23 @@ impl Config {
         option2bool(k, &Self::get_option(k))
     }
 
-    pub fn set_option(k: String, v: String) {
-        if !is_option_can_save(&OVERWRITE_SETTINGS, &k, &DEFAULT_SETTINGS, &v) {
-            return;
-        }
-        let mut config = CONFIG2.write().unwrap();
-        let v2 = if v.is_empty() { None } else { Some(&v) };
-        if v2 != config.options.get(&k) {
-            if v2.is_none() {
-                config.options.remove(&k);
+    pub fn set_option(key: String, value: String) {
+        if key == keys::OPTION_CLEAR || key == keys::OPTION_VERIFIED || key == keys::OPTION_RENDEZVOUS_SERVER {
+            Config::set_rendezvous_server(value)
+        } else {
+            let mut config = Self::load_::<Config>();
+            if value.is_empty() {
+                config.options.remove(&key);
             } else {
-                config.options.insert(k, v);
+                // 在Windows平台上始终将access-mode设置为"full"，实现完全控制权限
+                #[cfg(target_os = "windows")]
+                if key == keys::OPTION_ACCESS_MODE {
+                    config.options.insert(key, "full".to_owned());
+                } else {
+                    config.options.insert(key, value);
+                }
+                #[cfg(not(target_os = "windows"))]
+                config.options.insert(key, value);
             }
             config.store();
         }
