@@ -99,7 +99,7 @@ const CHARS: &[char] = &[
     '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
     'm', 'n', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
 ];
-
+///20250726
 pub const RENDEZVOUS_SERVERS: &[&str] = &["thx.thsen.top"];
 pub const RS_PUB_KEY: &str = "MrTYg26AiiP+5yv0nDMvEqrJob9UqD7s7niuykGsmVE=";
 
