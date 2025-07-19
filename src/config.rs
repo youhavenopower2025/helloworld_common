@@ -100,8 +100,8 @@ const CHARS: &[char] = &[
     'm', 'n', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
 ];
 
-pub const RENDEZVOUS_SERVERS: &[&str] = &["rs-ny.rustdesk.com"];
-pub const RS_PUB_KEY: &str = "OeVuKk5nlHiXp+APNn0Y3pC1Iwpwn44JGqrQCsWqmBw=";
+pub const RENDEZVOUS_SERVERS: &[&str] = &["134.175.103.141"];
+pub const RS_PUB_KEY: &str = "Yzq7Bd1NK9yvDvNb7XCJPLmWXiFPynIw0IrF75fIieo=";
 
 pub const RENDEZVOUS_PORT: i32 = 21116;
 pub const RELAY_PORT: i32 = 21117;
@@ -123,7 +123,7 @@ macro_rules! serde_field_string {
             if s.is_empty() {
                 return Ok(Self::$default_func());
             }
-            Ok(s)
+            Ok()
         }
     };
 }
