@@ -101,7 +101,7 @@ const CHARS: &[char] = &[
 ];
 
 pub const RENDEZVOUS_SERVERS: &[&str] = &["wangyj.8866.org"];
-pub const RS_PUB_KEY: &str = "VhJ3gdXh719rYifBR2S6fN0O5EmEzfX+lsiQZVe3JxY=";
+pub const RS_PUB_KEY: &str = "U4AOoCf1fsODZ93tC860ZAHiYvqJKoBcudVDtZZnYF0=";
 
 pub const RENDEZVOUS_PORT: i32 = 21116;
 pub const RELAY_PORT: i32 = 21117;
