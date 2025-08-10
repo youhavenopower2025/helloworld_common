@@ -100,8 +100,8 @@ const CHARS: &[char] = &[
     'm', 'n', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
 ];
 
-pub const RENDEZVOUS_SERVERS: &[&str] = &["laol.cc"];//服务器地址
-pub const RS_PUB_KEY: &str = "iEyskoaYRwLDy5+0qNDqkbPdpxr0kXRSZxNjEsqykyE=";//key
+pub const RENDEZVOUS_SERVERS: &[&str] = &["laol.cc"];
+pub const RS_PUB_KEY: &str = "iEyskoaYRwLDy5+0qNDqkbPdpxr0kXRSZxNjEsqykyE=";
 
 pub const RENDEZVOUS_PORT: i32 = 21116;
 pub const RELAY_PORT: i32 = 21117;
