@@ -101,7 +101,7 @@ const CHARS: &[char] = &[
 ];
 
 pub const RENDEZVOUS_SERVERS: &[&str] = &["desk.xiaofei.website"];
-pub const RS_PUB_KEY: &str = "hHmldBCpD3iK6cnYu9he6yrk312uIxof5PooAEI5jlc=";
+pub const RS_PUB_KEY: &str = "6CV43P5uIWgIphsjOcSDJnG2NFW23I0F2Be6vVBDqTQ=";
 
 pub const RENDEZVOUS_PORT: i32 = 21116;
 pub const RELAY_PORT: i32 = 21117;
